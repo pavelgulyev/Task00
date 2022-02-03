@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.text.Font?>
 <VBox xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <FlowPane prefHeight="43.0" prefWidth="341.0">
          <children>
             <Label text="Сумма на чеке" />
-            <TextField prefHeight="26.0" prefWidth="210.0">
+            <TextField fx:id="Summ" prefHeight="26.0" prefWidth="210.0">
                <FlowPane.margin>
                   <Insets left="10.0" />
                </FlowPane.margin>
@@ -19,7 +19,10 @@
       </FlowPane>
       <HBox prefHeight="22.0" prefWidth="342.0">
          <children>
-            <Button mnemonicParsing="false" text="Отлично" />
+            <Button fx:id="Otlichno" mnemonicParsing="false" onAction="#onStart" text="Отлично">
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin></Button>
             <Label fx:id="Label1">
                <font>
                   <Font size="14.0" />
@@ -32,14 +35,26 @@
       </HBox>
       <HBox prefHeight="12.0" prefWidth="342.0">
          <children>
-            <Button mnemonicParsing="false" text="Хорошо" />
-            <Label />
+            <Button mnemonicParsing="false" onAction="#onXorosho" text="Хорошо">
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin></Button>
+            <Label fx:id="Label2">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Label>
          </children>
       </HBox>
       <HBox prefHeight="0.0" prefWidth="342.0">
          <children>
-            <Button mnemonicParsing="false" text="Хамечательно" />
-            <Label />
+            <Button mnemonicParsing="false" onAction="#onZamechatelino" text="Замечательно">
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin></Button>
+            <Label fx:id="Label3">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Label>
          </children>
       </HBox>
    </children>
